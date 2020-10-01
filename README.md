@@ -1,7 +1,7 @@
 # TePuint Club 的官方网站
 ## Official website of TePuintClub
 
-![markdown](https://tepuint.club/favicon.ico "logo")
+![markdown](https://avatars1.githubusercontent.com/u/72178612?s=200&v=4 "logo")
 
 >TePuintClub是一个由几个爱好计算机的学生党建立的
 
