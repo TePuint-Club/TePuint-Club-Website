@@ -1,0 +1,35 @@
+<template>
+	<div id="app">
+		<app-bar :status="status"></app-bar>
+		<router-view></router-view>
+	</div>
+</template>
+
+<script>
+	import axios from 'axios'
+	import mdui from 'mdui/dist/js/mdui.min.js'
+	import status from './main/status.js'
+	import appBar from './components/header/app-bar.vue'
+
+	export default {
+		name: 'app',
+		components: {
+			appBar,
+		},
+		data: function() {
+			return {
+				status: status,
+			}
+
+		},
+		watch: {
+			$route(to, from) {
+				this.appData.page = to.path
+				//具体执行代码
+			}
+		}
+	}
+</script>
+
+<style>
+</style>
