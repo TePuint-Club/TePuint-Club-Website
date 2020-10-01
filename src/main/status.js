@@ -1,4 +1,5 @@
 export default {
 	isLoading: false,
-	title: "TePuint Club"
+	title: "TePuint Club",
+	drawer: {},
 }

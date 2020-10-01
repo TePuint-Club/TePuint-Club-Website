@@ -10,7 +10,7 @@ import './main/status.js'
 import router from './main/router.js'
 import App from './App.vue'
 
-axios.defaults.baseURL = 'api.rainapi.cn/teclub';
+axios.defaults.baseURL = 'https://api.rainapi.cn/teclub/';
 
 Vue.use(VueLazyLoad);
 Vue.use(VueRouter);
@@ -21,4 +21,10 @@ Vue.config.productionTip = false
 new Vue({
 	render: h => h(App),
 	router,
+	updated: function() {
+		mdui.mutation()
+	},
+	mounted: function() {
+		mdui.mutation()
+	}
 }).$mount('#app')
