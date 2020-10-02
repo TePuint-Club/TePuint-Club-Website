@@ -1,6 +1,7 @@
 <template>
 	<div class="mdui-drawer" id="drawer">
 		<ul class="mdui-list">
+			<!-- 固定按钮 -->
 			<li class="mdui-list-item mdui-ripple" @click="navto('/')">
 				<i class="mdui-list-item-icon mdui-icon material-icons">home</i>
 				<div class="mdui-list-item-content">主页</div>
@@ -13,8 +14,14 @@
 				<i class="mdui-list-item-icon mdui-icon material-icons">assignment</i>
 				<div class="mdui-list-item-content">我们的项目</div>
 			</li>
+			<!-- 动态加载内容 -->
 			<li class="mdui-subheader">我们的成员</li>
 			<member v-for="member in memberlist" :member="member" />
+			<!-- 网站信息 -->
+			<div class="copyright">
+				<p class="mdui-typo-caption-opacity">© 2020 TePuint Club</p>
+				<p class="mdui-typo-caption-opacity">Powered by <a href="https://mdui.org" target="_blank">MDUI</a> &amp; <a href="https://vuejs.cn" target="_blank">VUE</a></p>
+			</div>
 		</ul>
 	</div>
 </template>
@@ -56,7 +63,7 @@
 				try {
 					this.$router.push(nav)
 				} catch (err) {
-				
+
 				}
 			}
 		}
@@ -64,4 +71,11 @@
 </script>
 
 <style>
+	.copyright {
+		box-sizing: border-box;
+		width: 100%;
+		padding: 10px 16px;
+		position: absolute;
+		bottom: 0;
+	}
 </style>

@@ -1,12 +1,29 @@
 <template>
-	<div id="post" class="mdui-container">
-		<h1>post id</h1>
-		<p>{{CID}}</p>
-		<h1>post data</h1>
-		<p>{{JSON.stringify(postdata)}}</p>
-		<div class="mdui-divider"></div>
-		<div class="mdui-typo">
-			<postitem v-for="item in postdata.content" :item="item"></postitem>
+	<div id="post" class="mdui-container mdui-center">
+		<div class="header-nav">
+			<!-- 文章头部返回按钮 -->
+			<button class="back mdui-btn mdui-color-transparent mdui-ripple" @click="goBack()">
+				<i class="mdui-icon mdui-icon-left material-icons">arrow_back</i>返回
+			</button>
+		</div>
+		<div class="mdui-card text mdui-shadow-11">
+			<!-- 文章特色图片 -->
+			<div class="mdui-card-media">
+				<img :src="postdata.coverImage" />
+			</div>
+			<!-- 文章标题 -->
+			<div class="post-header mdui-text-color-theme mdui-valign">
+				<span class="mdui-typo-display-2 mdui-text-center">{{postdata.title}}</span>
+			</div>
+			<!-- 文章组成 -->
+			<div class="mdui-card-content mdui-typo">
+				<postitem v-for="(item,p,index) in postdata.content" :item="item" :key="index" class="postitem"></postitem>
+			</div>
+			<!-- 文章末尾 -->
+			<div class="mdui-divider"></div>
+			<div class="mdui-card-primary mdui-color-grey-200">
+				<div class="mdui-card-primary-subtitle">{{postdata.auther}} 最后编辑于 {{postdata.date}}</div>
+			</div>
 		</div>
 	</div>
 </template>
@@ -63,4 +80,19 @@
 </script>
 
 <style>
+	.post-header {
+		margin: 40px 0px 10px 40px;
+	}
+
+	.text {
+		border-radius: 8px;
+	}
+
+	.postitem {
+		margin: 20px 40px 0px;
+	}
+
+	.header-nav {
+		margin: 20px 0px 10px;
+	}
 </style>
