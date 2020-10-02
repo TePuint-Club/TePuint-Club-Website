@@ -14,7 +14,6 @@ axios.defaults.baseURL = 'https://api.rainapi.cn/teclub/';
 
 Vue.use(VueLazyLoad);
 Vue.use(VueRouter);
-Vue.use(axios);
 
 Vue.config.productionTip = false
 
