@@ -6,7 +6,7 @@
 				<i class="mdui-list-item-icon mdui-icon material-icons">home</i>
 				<div class="mdui-list-item-content">主页</div>
 			</li>
-			<li class="mdui-list-item mdui-ripple">
+			<li class="mdui-list-item mdui-ripple" @click="goPost(1)">
 				<i class="mdui-list-item-icon mdui-icon material-icons">info_outline</i>
 				<div class="mdui-list-item-content">关于我们</div>
 			</li>
@@ -65,6 +65,14 @@
 				} catch (err) {
 
 				}
+			},
+			goPost(i) {
+				this.$router.push({
+					name: 'post',
+					params: {
+						CID: i
+					}
+				})
 			}
 		}
 	}
