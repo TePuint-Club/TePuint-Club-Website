@@ -34,6 +34,7 @@
 		},
 		created: function() {
 			this.loadpage()
+			this.status.post = "主页"
 		},
 		methods: {
 			goBack() {

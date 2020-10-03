@@ -103,8 +103,4 @@
 	.card>.card-title {
 		margin: 18px 0px 0px 18px;
 	}
-	
-	.card-img {
-		max-height: 400px;
-	}
 </style>

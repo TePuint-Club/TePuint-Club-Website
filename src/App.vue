@@ -23,12 +23,6 @@
 			return {
 				status: status,
 			}
-		},
-		watch: {
-			$route(to, from) {
-				this.appData.page = to.path
-				//具体执行代码
-			}
 		}
 	}
 </script>

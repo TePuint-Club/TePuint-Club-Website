@@ -4,7 +4,7 @@
 			<span @click="status.drawer.toggle()" class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white">
 				<i class="mdui-icon material-icons">menu</i>
 			</span>
-			<a href="https://tepuint.club/" class="mdui-typo-headline">{{status.title}}</a>
+			<a href="https://tepuint.top/" class="mdui-typo-headline">{{status.title}}</a>
 			<span class="mdui-typo-headline">{{status.post}}</span>
 			<div class="mdui-toolbar-spacer"></div>
 		</div>

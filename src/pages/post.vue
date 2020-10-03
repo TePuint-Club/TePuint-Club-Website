@@ -10,7 +10,7 @@
 			<div class="post mdui-card mdui-shadow-11">
 				<!-- 文章特色图片 -->
 				<div class="mdui-card-media">
-					<img v-lazy="postdata.coverImage" class="post-media" />
+					<img :src="postdata.coverImage" />
 				</div>
 				<!-- 文章标题 -->
 				<div class="post-header mdui-text-color-theme mdui-valign">
@@ -75,7 +75,7 @@
 					.then(function(response) {
 						vm.status.post = response.data.title
 						vm.postdata = response.data;
-						status.isLoading = false;
+						vm.status.isLoading = false;
 					})
 			}
 		}
@@ -102,10 +102,6 @@
 
 	.post>.post-header {
 		margin: 40px 0px 10px 30px;
-	}
-
-	.post-media {
-		max-height: 400px;
 	}
 
 	.postitem {
