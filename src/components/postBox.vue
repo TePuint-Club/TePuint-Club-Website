@@ -1,9 +1,9 @@
 <template>
 	<div v-if="postinf.TID ==='daily'">
-		<div class="card mdui-card mdui-center">
+		<div class="card mdui-card mdui-center mdui-hoverable">
 			<!-- 卡片的媒体内容，可以包含图片、视频等媒体内容，以及标题、副标题 -->
 			<div class="mdui-card-media">
-				<img :src="postinf.image" />
+				<img v-lazy="postinf.coverImage" class="card-img"/>
 			</div>
 
 			<!-- 卡片的标题和副标题 -->
@@ -18,6 +18,15 @@
 			<button class="mdui-float-right card-btn mdui-text-color-theme-accent mdui-btn mdui-ripple mdui-text-center" @click="goPost(postinf.CID)">
 				去浏览
 			</button>
+		</div>
+	</div>
+	<div v-else-if="postinf.TID ==='state'">
+		<div class="state mdui-color-grey-100 mdui-card mdui-center mdui-hoverable">
+			<div class="state-title mdui-text-color-grey-700 mdui-text-truncate mdui-color-grey-300 mdui-valign mdui-typo-headline">
+				<i class="mdui-icon material-icons">announcement</i> {{postinf.title}}
+			</div>
+			<div class="mdui-card-content" v-html="postinf.discription">
+			</div>
 		</div>
 	</div>
 </template>
@@ -51,21 +60,51 @@
 </script>
 
 <style>
+	.state {
+		min-height: 200px;
+		border-radius: 16px;
+		margin: 20px;
+		max-width: 700px;
+	}
+	
+	.state>.state-title {
+		height: 50px;
+		margin: 0px 18px 0px 18px;
+		border-radius: 0px 0px 8px 8px;
+	}
+
+	.state-title>.mdui-icon {
+		margin: 15px;
+	}
+	
+	.state>.mdui-card-content{
+		font-size: 20px;
+		margin: 0px 20px 0px 20px;
+	}
+
 	.card {
 		border-radius: 16px;
 		margin: 20px;
 		max-width: 700px;
 	}
 
-	.card-btn {
+	.card>.mdui-card-content{
+		font-size: 20px;
+	}
+
+	.card>.card-btn {
 		margin: 8px 12px 8px 0px;
 	}
 
-	.card-info {
+	.card>.card-info {
 		margin: 12px 15px;
 	}
 
-	.card-title {
+	.card>.card-title {
 		margin: 18px 0px 0px 18px;
+	}
+	
+	.card-img {
+		max-height: 400px;
 	}
 </style>

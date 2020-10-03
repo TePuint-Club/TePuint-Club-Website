@@ -10,12 +10,12 @@
 				<i class="mdui-list-item-icon mdui-icon material-icons">info_outline</i>
 				<div class="mdui-list-item-content">关于我们</div>
 			</li>
-			<li class="mdui-list-item mdui-ripple">
+			<a href="https://github.com/TePuint-Club" target="_blank" class="mdui-list-item mdui-ripple">
 				<i class="mdui-list-item-icon mdui-icon material-icons">assignment</i>
 				<div class="mdui-list-item-content">我们的项目</div>
-			</li>
+			</a>
 			<!-- 动态加载内容 -->
-			<li class="mdui-subheader">我们的成员</li>
+			<div class="mdui-subheader">我们的成员</div>
 			<member v-for="member in memberlist" :member="member" />
 			<!-- 网站信息 -->
 			<div class="copyright">
@@ -77,5 +77,8 @@
 		padding: 10px 16px;
 		position: absolute;
 		bottom: 0;
+	}
+	.mdui-list > .mdui-list-item {
+			border-radius: 0px 30px 30px 0px;
 	}
 </style>

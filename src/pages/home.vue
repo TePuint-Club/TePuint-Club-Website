@@ -7,6 +7,9 @@
 				加载更多
 			</button>
 		</div>
+		<div v-show="page > maxpage && !status.isLoading">
+			<span class="mdui-card-primary-subtitle mdui-text-center">已加载完所有数据</span>
+		</div>
 	</div>
 </template>
 

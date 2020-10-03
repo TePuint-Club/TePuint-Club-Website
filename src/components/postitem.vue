@@ -21,7 +21,7 @@
 	</div>
 	<div v-else-if="item.type === 'markdown'">
 		<!-- Markdown文本块 -->
-		<markdown-it-vue class="md-body markdown" :content="item.data" :options="options" />
+		<markdown-it-vue class="md-body" :content="item.data" :options="options" />
 	</div>
 </template>
 
@@ -56,7 +56,4 @@
 </script>
 
 <style>
-	.markdown {
-		margin: 0px 10px 0px 10px;
-	}
 </style>

@@ -9,7 +9,7 @@
 		<div class="post mdui-card mdui-shadow-11">
 			<!-- 文章特色图片 -->
 			<div class="mdui-card-media">
-				<img :src="postdata.coverImage" />
+				<img v-lazy="postdata.coverImage" class="post-media"/>
 			</div>
 			<!-- 文章标题 -->
 			<div class="post-header mdui-text-color-theme mdui-valign">
@@ -80,12 +80,16 @@
 </script>
 
 <style>
-	.post-header {
+	.post {
+		border-radius: 8px;
+	}
+	
+	.post>.post-header {
 		margin: 40px 0px 10px 40px;
 	}
 
-	.post {
-		border-radius: 8px;
+	.post-media {
+		max-height: 400px;
 	}
 
 	.postitem {
