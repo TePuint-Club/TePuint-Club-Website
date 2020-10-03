@@ -5,6 +5,7 @@
 				<i class="mdui-icon material-icons">menu</i>
 			</span>
 			<a href="https://tepuint.club/" class="mdui-typo-headline">{{status.title}}</a>
+			<span class="mdui-typo-headline">{{status.post}}</span>
 			<div class="mdui-toolbar-spacer"></div>
 		</div>
 		<div class="mdui-progress" v-if="status.isLoading">

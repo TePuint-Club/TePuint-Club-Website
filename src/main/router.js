@@ -3,16 +3,16 @@ import VueRouter from 'vue-router';
 
 Vue.use(VueRouter)
 
+//重复路由检查
 const originalPush = VueRouter.prototype.push
 VueRouter.prototype.push = function push(location) {
-  return originalPush.call(this, location).catch(err => err)
+	return originalPush.call(this, location).catch(err => err)
 }
 
 import home from '../pages/home.vue';
 import post from '../pages/post.vue';
 
-const routes = [
-	{
+const routes = [{
 		path: "",
 		name: '/',
 		component: home

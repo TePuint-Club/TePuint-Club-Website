@@ -16,7 +16,7 @@
 			</a>
 			<!-- 动态加载内容 -->
 			<div class="mdui-subheader">我们的成员</div>
-			<member v-for="member in memberlist" :member="member" />
+			<member v-for="(member,p,index) in memberlist" :key="index" :member="member" />
 			<!-- 网站信息 -->
 			<div class="copyright">
 				<p class="mdui-typo-caption-opacity">© 2020 TePuint Club</p>

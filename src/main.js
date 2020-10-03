@@ -10,6 +10,8 @@ import './main/status.js'
 import router from './main/router.js'
 import App from './App.vue'
 
+document.querySelector('body').setAttribute('style', 'background: #f7f7f7')
+
 axios.defaults.baseURL = 'https://api.rainapi.cn/teclub/';
 
 Vue.use(VueLazyLoad);
