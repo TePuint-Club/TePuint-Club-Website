@@ -6,7 +6,7 @@
 				<i class="mdui-icon mdui-icon-left material-icons">arrow_back</i>返回
 			</button>
 		</div>
-		<div class="mdui-card text mdui-shadow-11">
+		<div class="post mdui-card mdui-shadow-11">
 			<!-- 文章特色图片 -->
 			<div class="mdui-card-media">
 				<img :src="postdata.coverImage" />
@@ -84,7 +84,7 @@
 		margin: 40px 0px 10px 40px;
 	}
 
-	.text {
+	.post {
 		border-radius: 8px;
 	}
 
