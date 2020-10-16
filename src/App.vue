@@ -8,7 +8,6 @@
 
 <script>
 	import axios from 'axios'
-	import mdui from 'mdui/dist/js/mdui.min.js'
 	import status from './main/status.js'
 	import appBar from './components/header/app-bar.vue'
 	import drawer from './components/header/drawer.vue'

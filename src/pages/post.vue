@@ -1,5 +1,5 @@
 <template>
-	<div id="post">
+	<div id="post" v-show="!status.isLoading">
 		<div class="container mdui-center">
 			<div class="header-nav">
 				<!-- 文章头部返回按钮 -->
@@ -32,7 +32,6 @@
 
 <script>
 	import axios from 'axios'
-	import mdui from 'mdui/dist/js/mdui.min.js'
 	import status from '../main/status.js'
 	import postitem from '../components/postitem.vue'
 

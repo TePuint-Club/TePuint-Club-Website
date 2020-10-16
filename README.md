@@ -23,39 +23,39 @@
      
 ### 项目网站：
 
-- [TePuint](https://tepuint.club/)
+- [TePuint](https://tepuint.top/)
 
 
 
 
-# default
+# 如何使用
 
-## Project setup
+## 安装项目所需文件
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### 启动项目开发服务器（支持热重载）
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### 编译项目到生产环境
 ```
 npm run build
 ```
 
-### Run your tests
+### 运行测试
 ```
 npm run test
 ```
 
-### Lints and fixes files
+### 修复项目
 ```
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### 详细设置
+参照 [Configuration Reference](https://cli.vuejs.org/config/).
 
 

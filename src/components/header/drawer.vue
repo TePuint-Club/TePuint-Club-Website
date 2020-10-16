@@ -27,7 +27,6 @@
 </template>
 
 <script>
-	import mdui from 'mdui/dist/js/mdui.min.js'
 	import status from '../../main/status.js'
 	import member from './member.vue'
 	import axios from 'axios'

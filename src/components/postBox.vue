@@ -33,7 +33,6 @@
 
 <script>
 	import status from '../main/status.js'
-	import mdui from 'mdui/dist/js/mdui.min.js'
 
 	export default {
 		name: 'post-box',

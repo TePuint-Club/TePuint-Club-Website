@@ -9,8 +9,9 @@ VueRouter.prototype.push = function push(location) {
 	return originalPush.call(this, location).catch(err => err)
 }
 
-import home from '../pages/home.vue';
-import post from '../pages/post.vue';
+//路由懒加载
+const home = () => import('../pages/home.vue');
+const post = () => import('../pages/post.vue');
 
 const routes = [{
 		path: "",

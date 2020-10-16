@@ -15,7 +15,6 @@
 
 <script>
 	import axios from 'axios'
-	import mdui from 'mdui/dist/js/mdui.min.js'
 	import status from '../main/status.js'
 	import postBox from '../components/postBox.vue'
 
