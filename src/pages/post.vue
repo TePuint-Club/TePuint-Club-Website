@@ -72,7 +72,7 @@
 						}
 					})
 					.then(function(response) {
-						vm.status.post = response.data.title
+						vm.status.post = response.data
 						vm.postdata = response.data;
 						vm.status.isLoading = false;
 					})
@@ -83,13 +83,13 @@
 
 <style>
 	@media screen and (max-width:600px) {
-		.post {
+		.container>.post {
 			border-radius: 0px;
 		}
 	}
 
 	@media screen and (min-width:600px) {
-		.post {
+		.container>.post {
 			border-radius: 8px;
 		}
 
@@ -98,7 +98,6 @@
 			max-width: 980px;
 		}
 	}
-
 	.post>.post-header {
 		margin: 40px 0px 10px 30px;
 	}

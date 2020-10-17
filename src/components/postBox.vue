@@ -1,6 +1,6 @@
 <template>
 	<div v-if="postinf.TID ==='daily'">
-		<div class="card mdui-card mdui-center mdui-hoverable">
+		<div class="card mdui-card mdui-center mdui-hoverable" style="border-radius: 16px;">
 			<!-- 卡片的媒体内容，可以包含图片、视频等媒体内容，以及标题、副标题 -->
 			<div class="mdui-card-media">
 				<img v-lazy="postinf.coverImage" class="card-img"/>
@@ -21,8 +21,8 @@
 		</div>
 	</div>
 	<div v-else-if="postinf.TID ==='state'">
-		<div class="state mdui-color-grey-100 mdui-card mdui-center mdui-hoverable">
-			<div class="state-title mdui-text-color-grey-700 mdui-text-truncate mdui-color-grey-300 mdui-valign mdui-typo-headline">
+		<div class="state mdui-color-grey-100 mdui-card mdui-center mdui-hoverable" style="border-radius: 16px;">
+			<div class="state-title mdui-text-color-grey-700 mdui-text-truncate mdui-color-grey-300 mdui-valign mdui-typo-headline" style="border-radius: 0px 0px 8px 8px;">
 				<i class="mdui-icon material-icons">announcement</i> {{postinf.title}}
 			</div>
 			<div class="mdui-card-content" v-html="postinf.discription">
@@ -61,7 +61,6 @@
 <style>
 	.state {
 		min-height: 200px;
-		border-radius: 16px;
 		margin: 20px;
 		max-width: 700px;
 	}
@@ -69,7 +68,6 @@
 	.state>.state-title {
 		height: 50px;
 		margin: 0px 18px 0px 18px;
-		border-radius: 0px 0px 8px 8px;
 	}
 
 	.state-title>.mdui-icon {
@@ -82,7 +80,6 @@
 	}
 
 	.card {
-		border-radius: 16px;
 		margin: 20px;
 		max-width: 700px;
 	}
