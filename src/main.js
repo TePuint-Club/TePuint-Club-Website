@@ -3,7 +3,6 @@ import VueLazyLoad from 'vue-lazyload'
 import axios from 'axios'
 import VueRouter from 'vue-router'
 
-import './main/status.js'
 import router from './main/router.js'
 import App from './App.vue'
 
@@ -15,7 +14,7 @@ Vue.use(VueLazyLoad);
 Vue.use(VueRouter);
 
 Vue.config.productionTip = false;
-Vue.config.devtools = true;
+Vue.config.devtools = false;
 
 new Vue({
 	render: h => h(App),

@@ -10,8 +10,8 @@ VueRouter.prototype.push = function push(location) {
 }
 
 //路由懒加载
-const home = () => import('../pages/home.vue');
-const post = () => import('../pages/post.vue');
+const home = () => import('../views/home.vue');
+const post = () => import('../views/post.vue');
 
 const routes = [{
 		path: "",
@@ -27,7 +27,6 @@ const routes = [{
 
 const router = new VueRouter({
 	routes,
-	mode: 'history',
 });
 
 export default router
