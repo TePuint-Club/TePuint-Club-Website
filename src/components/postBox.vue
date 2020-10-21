@@ -24,7 +24,9 @@
       </div>
       <div class="mdui-divider"></div>
       <div class="card-info mdui-card-primary-subtitle mdui-float-left">
-        作者:{{ postinfo.auther }}&nbsp;&nbsp;&nbsp;分类:{{ postinfo.TID }}&nbsp;&nbsp;&nbsp;日期:{{postinfo.date}}
+        作者:{{ postinfo.auther }}&nbsp;&nbsp;&nbsp;分类:{{
+          postinfo.TID
+        }}&nbsp;&nbsp;&nbsp;日期:{{ postinfo.date }}
       </div>
       <button
         class="mdui-float-right card-btn mdui-text-color-theme-accent mdui-btn mdui-ripple mdui-text-center"
@@ -39,13 +41,15 @@
       class="state mdui-color-grey-100 mdui-card mdui-center mdui-hoverable"
       style="border-radius: 16px"
     >
+      {{ getpostinfo(postinf.CID) }}
       <div
         class="state-title mdui-text-color-grey-700 mdui-text-truncate mdui-color-grey-300 mdui-valign mdui-typo-headline"
         style="border-radius: 0px 0px 8px 8px"
       >
-        <i class="mdui-icon material-icons">announcement</i> {{ postinf.title }}
+        <i class="mdui-icon material-icons">announcement</i>
+        {{ postinfo.title }}
       </div>
-      <div class="mdui-card-content" v-html="postinf.discription"></div>
+      <div class="mdui-card-content" v-html="postinfo.discription"></div>
     </div>
   </div>
 </template>

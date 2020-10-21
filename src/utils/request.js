@@ -34,6 +34,10 @@ service.interceptors.response.use(
         return res
     },
     error => {
+        mdui.snackbar({
+            message: error,
+            position: 'right-bottom'
+        });
         // 这里处理一些response 出错时的逻辑
         status.isLoading = false;
         return Promise.reject(error)

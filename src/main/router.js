@@ -12,6 +12,7 @@ VueRouter.prototype.push = function push(location) {
 //路由懒加载
 const home = () => import('../views/home.vue');
 const post = () => import('../views/post.vue');
+const more = () => import('../views/more.vue');
 
 const routes = [{
 		path: "",
@@ -22,6 +23,11 @@ const routes = [{
 		path: "/post/:CID",
 		name: 'post',
 		component: post
+	},
+	{
+		path: "/more",
+		name: 'more',
+		component: more
 	}
 ]
 

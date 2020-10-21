@@ -10,6 +10,10 @@
         <i class="mdui-list-item-icon mdui-icon material-icons">info_outline</i>
         <div class="mdui-list-item-content">关于我们</div>
       </li>
+      <li class="mdui-list-item mdui-ripple" @click="navto('/more')">
+        <i class="mdui-list-item-icon mdui-icon material-icons">launch</i>
+        <div class="mdui-list-item-content">更多文章</div>
+      </li>
       <a
         href="https://github.com/TePuint-Club"
         target="_blank"

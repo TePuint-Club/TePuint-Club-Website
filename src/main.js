@@ -14,7 +14,7 @@ Vue.use(VueLazyLoad);
 Vue.use(VueRouter);
 
 Vue.config.productionTip = false;
-Vue.config.devtools = false;
+Vue.config.devtools = true;
 
 new Vue({
 	render: h => h(App),
