@@ -18,5 +18,6 @@ module.exports = {
       loaderOptions: {}
     },
 
-    productionSourceMap: false
+    productionSourceMap: false,
+    publicPath: 'http://assets.papernote.cn/tepuint/'
 }
