@@ -16,7 +16,7 @@ const more = () => import('../views/more.vue');
 
 const routes = [{
 		path: "",
-		name: '/',
+		name: 'home',
 		component: home
 	},
 	{

@@ -18,6 +18,8 @@ module.exports = {
       loaderOptions: {}
     },
 
-    productionSourceMap: false,
-    publicPath: 'http://assets.papernote.cn/tepuint/'
+	productionSourceMap: false,
+	
+	// 当处于开发状态或需要单独打包时，将下面这段话注释
+    //publicPath: 'http://assets.papernote.cn/tepuint/'
 }

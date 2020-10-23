@@ -110,7 +110,7 @@ export default {
       if (i.source == 3) return
       vm.info = i;
     });
-    this.status.post = "更多文章";
+    this.status.post.title = "更多文章";
   },
   methods: {
     goBack() {

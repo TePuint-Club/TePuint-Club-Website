@@ -7,7 +7,7 @@ import App from './App.vue'
 
 document.querySelector('body').setAttribute('style', 'background: #f7f7f7')
 
-window.localStorage.wmUserInfo = JSON.stringify({ userId: mdui.$.guid('TePuint'), projectVersion: '1.0.1' })
+window.localStorage.wmUserInfo = JSON.stringify({ userId: mdui.$.guid('TePuint'), projectVersion: '1.0.2' })
 
 Vue.use(VueLazyLoad);
 Vue.use(VueRouter);

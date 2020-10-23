@@ -43,7 +43,7 @@ export default {
   },
   created: function () {
     this.loadpage();
-    this.status.post = "主页";
+    this.status.post.title = "主页";
   },
   methods: {
     goBack() {
