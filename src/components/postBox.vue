@@ -4,29 +4,28 @@
       class="card mdui-card mdui-center mdui-hoverable"
       style="border-radius: 16px"
     >
-      {{ getpostinfo(postinf.CID) }}
       <!-- 卡片的媒体内容，可以包含图片、视频等媒体内容，以及标题、副标题 -->
       <div class="mdui-card-media">
-        <img v-lazy="postinfo.coverImage" class="card-img" />
+        <img v-lazy="postinf.coverImage" class="card-img" />
       </div>
 
       <!-- 卡片的标题和副标题 -->
       <div
         class="card-title mdui-typo-display-1 mdui-text-color-theme"
-        @click="goPost(postinfo.CID)"
+        @click="goPost(postinf.CID)"
       >
-        {{ postinfo.title }}
+        {{ postinf.title }}
       </div>
 
       <!-- 卡片的内容 -->
       <div class="mdui-card-content">
-        {{ postinfo.discription }}
+        {{ postinf.discription }}
       </div>
       <div class="mdui-divider"></div>
       <div class="card-info mdui-card-primary-subtitle mdui-float-left">
-        作者:{{ postinfo.auther }}&nbsp;&nbsp;&nbsp;分类:{{
-          postinfo.TID
-        }}&nbsp;&nbsp;&nbsp;日期:{{ postinfo.date }}
+        作者:{{ postinf.auther }}&nbsp;&nbsp;&nbsp;分类:{{
+          postinf.TID
+        }}&nbsp;&nbsp;&nbsp;日期:{{ postinf.date }}
       </div>
       <button
         class="mdui-float-right card-btn mdui-text-color-theme-accent mdui-btn mdui-ripple mdui-text-center"
@@ -41,15 +40,14 @@
       class="state mdui-color-grey-100 mdui-card mdui-center mdui-hoverable"
       style="border-radius: 16px"
     >
-      {{ getpostinfo(postinf.CID) }}
       <div
         class="state-title mdui-text-color-grey-700 mdui-text-truncate mdui-color-grey-300 mdui-valign mdui-typo-headline"
         style="border-radius: 0px 0px 8px 8px"
       >
         <i class="mdui-icon material-icons">announcement</i>
-        {{ postinfo.title }}
+        {{ postinf.title }}
       </div>
-      <div class="mdui-card-content" v-html="postinfo.discription"></div>
+      <div class="mdui-card-content" v-html="postinf.discription"></div>
     </div>
   </div>
 </template>
@@ -78,14 +76,6 @@ export default {
         params: {
           CID: i,
         },
-      });
-    },
-    getpostinfo(i) {
-      if (this.isLoaded == true) return;
-      var vm = this;
-      post.getinfo(i).then(function (i) {
-        vm.isLoaded = true;
-        vm.postinfo = i;
       });
     },
   },

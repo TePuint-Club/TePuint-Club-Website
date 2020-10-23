@@ -23,6 +23,7 @@
 		<!-- Markdown文本块 -->
 		<markdown-it-vue class="md-body" :content="item.data" :options="options" />
 	</div>
+	<div v-else-if="item.type === 'html'" v-html="item.data"/>
 </template>
 
 <script>
