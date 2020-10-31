@@ -17,7 +17,7 @@ Vue.use(VueLazyLoad);
 Vue.use(VueRouter);
 
 Vue.config.productionTip = false; // 设置生产模式是否打开vue提示
-Vue.config.devtools = true; // 设置是否允许网页被调试
+Vue.config.devtools = false; // 设置是否允许网页被调试
 
 new Vue({
 	render: h => h(App),
