@@ -19,17 +19,11 @@
 		<!-- GitHub选项卡 -->
 		<github :data="item.data"></github>
 	</div>
-	<div v-else-if="item.type === 'markdown'">
-		<!-- Markdown文本块 -->
-		<markdown-it-vue class="md-body" :content="item.data" :options="options" />
-	</div>
 	<div v-else-if="item.type === 'html'" v-html="item.data"/>
 </template>
 
 <script>
 	import github from './github.vue'
-	import MarkdownItVue from 'markdown-it-vue'
-	import 'markdown-it-vue/dist/markdown-it-vue.css'
 
 	export default {
 		name: 'postitem',

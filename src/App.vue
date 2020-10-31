@@ -7,7 +7,6 @@
 </template>
 
 <script>
-	import axios from 'axios'
 	import status from './main/status.js'
 	import appBar from './components/header/app-bar.vue'
 	import drawer from './components/header/drawer.vue'
