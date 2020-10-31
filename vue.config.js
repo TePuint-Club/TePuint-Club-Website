@@ -22,5 +22,5 @@ module.exports = {
 	
 	// 这里设置静态资源地址，上传GitHub的资源默认不设置
 	// 当处于开发状态或需要单独打包时，将下面这段话注释
-    //publicPath: 'https://res.mr-wu.top/tepuint/201031/'
+	//publicPath: 'https://res.mr-wu.top/tepuint/201031/'
 }
